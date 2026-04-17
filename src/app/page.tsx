@@ -1,66 +1,41 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import React from "react";
+import dynamic from 'next/dynamic';
+import Navbar from "@/components/NavBar/Navbar";
+import Hero from "@/components/Hero/Hero";
+import { portfolioData } from "@/data/data";
+
+// Lazily load components below the fold to dramatically enhance PageSpeed performance (TTI & Hydration Time)
+const About = dynamic(() => import('@/components/About/About'), { ssr: true });
+const Skills = dynamic(() => import('@/components/Skills/Skills'), { ssr: true });
+const Experience = dynamic(() => import('@/components/Experience/Experience'), { ssr: true });
+const Education = dynamic(() => import('@/components/Education/Education'), { ssr: true });
+const Projects = dynamic(() => import('@/components/Projects/Projects'), { ssr: true });
+const Certifications = dynamic(() => import('@/components/Certifications/Certifications'), { ssr: true });
+const Contact = dynamic(() => import('@/components/Contact/Contact'), { ssr: true });
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <main>
+      <Navbar />
+      <Hero 
+        name={portfolioData.about.name}
+        title={portfolioData.about.title}
+        subtitle={portfolioData.about.subtitle}
+        resumeUrl={portfolioData.about.resumeUrl}
+      />
+      <About 
+        description={portfolioData.about.description}
+        image={portfolioData.about.image}
+      />
+      <Skills skills={portfolioData.skills} />
+      <Experience experience={portfolioData.experience} />
+      <Education education={portfolioData.education} />
+      <Certifications certifications={portfolioData.certifications} />
+      <Projects projects={portfolioData.projects} />
+      <Contact 
+        address={portfolioData.contact.address}
+        socials={portfolioData.contact.socials}
+      />
+    </main>
   );
 }

@@ -1,0 +1,106 @@
+.heroSection {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.backgroundEffect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.glow1, .glow2 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.4;
+  z-index: 0;
+  animation: var(--animate-float);
+}
+
+.glow1 {
+  width: 400px;
+  height: 400px;
+  background: var(--accent-blue);
+  top: -100px;
+  right: -100px;
+}
+
+.glow2 {
+  width: 500px;
+  height: 500px;
+  background: var(--accent-purple);
+  bottom: -200px;
+  left: -200px;
+  animation-delay: 2s;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.textContent {
+  max-width: 800px;
+}
+
+.greeting {
+  font-size: 1.5rem;
+  color: var(--accent-blue);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.name {
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  max-width: 600px;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.cta {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.secondaryBtn {
+  font-weight: 600;
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--accent-blue);
+  padding-bottom: 4px;
+  transition: var(--transition);
+}
+
+.secondaryBtn:hover {
+  color: var(--accent-blue);
+}
+
+
