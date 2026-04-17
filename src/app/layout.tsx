@@ -62,8 +62,8 @@ export default function RootLayout({
         "@type": "ProfilePage",
         "@id": "https://debajyotidutta.com/#profilepage",
         "url": "https://debajyotidutta.com/",
-        "name": "Debajyoti Dutta - Full Stack Developer",
-        "description": "Professional profile of Debajyoti Dutta, Full Stack Developer.",
+        "name": "Debajyoti Dutta",
+        "description": "Software Engineer & Full Stack Developer specializing in MERN Stack, Python, Javascript, NodeJS, Express, React, and DevOps.",
         "isPartOf": {
           "@id": "https://debajyotidutta.com/#website"
         },
