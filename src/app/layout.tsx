@@ -9,20 +9,37 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: "Debajyoti Dutta | Full Stack Developer | Software Engineer",
-  description: "Debajyoti Dutta is a Full Stack Developer skilled in MERN stack, Python, Javascript, React, Node JS, Express JS, Docker, Azure, and DevOps.",
-  keywords: ["Debajyoti Dutta", "Full Stack Developer", "Software Engineer", "MERN Stack Developer", "React Native Developer", "Web Developer Kolkata", "Azure Certified", "React", "NodeJS", "Python", "Pune", "Portfolio"],
+  description:
+    "Debajyoti Dutta is a Full Stack Developer skilled in MERN stack, Python, Javascript, React, Node JS, Express JS, Docker, Azure, and DevOps.",
+  keywords: [
+    "Debajyoti Dutta",
+    "Full Stack Developer",
+    "Software Engineer",
+    "MERN Stack Developer",
+    "React Native Developer",
+    "Web Developer Kolkata",
+    "Azure Certified",
+    "React",
+    "NodeJS",
+    "Python",
+    "Pune",
+    "Portfolio",
+  ],
   authors: [{ name: "Debajyoti Dutta", url: "https://debajyotidutta.com" }],
   creator: "Debajyoti Dutta",
   openGraph: {
     type: "website",
     url: "https://debajyotidutta.com/",
     title: "Debajyoti Dutta | Full Stack Developer",
-    description: "Software Engineer & Full Stack Developer specializing in MERN Stack, Python, Javascript, NodeJS, Express, React, and DevOps.",
-    siteName: "Debajyoti Dutta Portfolio",
-    images: [{
-      url: "https://debajyotidutta.com/images/debajyoti-dutta.webp",
-      alt: "Debajyoti Dutta - Full Stack Developer",
-    }],
+    description:
+      "Software Engineer & Full Stack Developer specializing in MERN Stack, Python, Javascript, NodeJS, Express, React, and DevOps.",
+    siteName: "Debajyoti Dutta",
+    images: [
+      {
+        url: "https://debajyotidutta.com/images/debajyoti-dutta.webp",
+        alt: "Debajyoti Dutta - Full Stack Developer",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -36,7 +53,7 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-  }
+  },
 };
 
 export default function RootLayout({
@@ -50,102 +67,129 @@ export default function RootLayout({
       {
         "@type": "WebSite",
         "@id": "https://debajyotidutta.com/#website",
-        "url": "https://debajyotidutta.com/",
-        "name": "Debajyoti Dutta",
-        "description": "Debajyoti Dutta - Software Engineer and Full Stack Developer.",
-        "publisher": {
-          "@id": "https://debajyotidutta.com/#person"
+        url: "https://debajyotidutta.com/",
+        name: "Debajyoti Dutta",
+        description:
+          "Debajyoti Dutta - Software Engineer and Full Stack Developer.",
+        publisher: {
+          "@id": "https://debajyotidutta.com/#person",
         },
-        "inLanguage": "en-US"
+        inLanguage: "en-US",
       },
       {
         "@type": "ProfilePage",
         "@id": "https://debajyotidutta.com/#profilepage",
-        "url": "https://debajyotidutta.com/",
-        "name": "Debajyoti Dutta",
-        "description": "Software Engineer & Full Stack Developer specializing in MERN Stack, Python, Javascript, NodeJS, Express, React, and DevOps.",
-        "isPartOf": {
-          "@id": "https://debajyotidutta.com/#website"
+        url: "https://debajyotidutta.com/",
+        name: "Debajyoti Dutta",
+        description:
+          "Software Engineer & Full Stack Developer specializing in MERN Stack, Python, Javascript, NodeJS, Express, React, and DevOps.",
+        isPartOf: {
+          "@id": "https://debajyotidutta.com/#website",
         },
-        "mainEntity": {
-          "@id": "https://debajyotidutta.com/#person"
+        mainEntity: {
+          "@id": "https://debajyotidutta.com/#person",
         },
-        "about": {
-          "@id": "https://debajyotidutta.com/#person"
+        about: {
+          "@id": "https://debajyotidutta.com/#person",
         },
-        "inLanguage": "en-US"
+        inLanguage: "en-US",
       },
       {
         "@type": "Person",
         "@id": "https://debajyotidutta.com/#person",
-        "name": "Debajyoti Dutta",
-        "url": "https://debajyotidutta.com/",
-        "image": "https://debajyotidutta.com/images/debajyoti-dutta.webp",
-        "jobTitle": "Full Stack Developer",
-        "alumniOf": {
+        name: "Debajyoti Dutta",
+        url: "https://debajyotidutta.com/",
+        image: "https://debajyotidutta.com/images/debajyoti-dutta.webp",
+        jobTitle: "Full Stack Developer",
+        alumniOf: {
           "@type": "CollegeOrUniversity",
-          "name": "B.P. Poddar Institute of Management & Technology"
+          name: "B.P. Poddar Institute of Management & Technology",
         },
-        "address": {
+        address: {
           "@type": "PostalAddress",
-          "addressLocality": "Bangalore",
-          "addressRegion": "Karnataka",
-          "addressCountry": "IN"
+          addressLocality: "Bangalore",
+          addressRegion: "Karnataka",
+          addressCountry: "IN",
         },
-        "knowsAbout": [
-          "JavaScript", "TypeScript", "React", "Node.js", "Express.js", 
-          "MongoDB", "PostgreSQL", "Google Cloud Platform", "Python", 
-          "Docker", "Firebase", "DevOps", "REST API", "React Native", "Azure", "Microservices"
+        knowsAbout: [
+          "JavaScript",
+          "TypeScript",
+          "React",
+          "Node.js",
+          "Express.js",
+          "MongoDB",
+          "PostgreSQL",
+          "Google Cloud Platform",
+          "Python",
+          "Docker",
+          "Firebase",
+          "DevOps",
+          "REST API",
+          "React Native",
+          "Azure",
+          "Microservices",
         ],
-        "hasOccupation": [
+        hasOccupation: [
           {
             "@type": "Occupation",
-            "name": "Full Stack Developer",
-            "occupationLocation": {
+            name: "Full Stack Developer",
+            occupationLocation: {
               "@type": "City",
-              "name": "Bangalore"
+              name: "Bangalore",
             },
-            "skills": [
-              "React Web Development", "React Native Development", 
-              "Backend Development", "Node.js Express.js", "REST API Design", "Cloud", "DevOps", "Microservices", "Python", "Docker", "Firebase", "PostgreSQL", "MongoDB", "Azure"
-            ]
-          }
+            skills: [
+              "React Web Development",
+              "React Native Development",
+              "Backend Development",
+              "Node.js Express.js",
+              "REST API Design",
+              "Cloud",
+              "DevOps",
+              "Microservices",
+              "Python",
+              "Docker",
+              "Firebase",
+              "PostgreSQL",
+              "MongoDB",
+              "Azure",
+            ],
+          },
         ],
-        "sameAs": [
+        sameAs: [
           "https://github.com/Debajyoti1",
           "https://www.linkedin.com/in/debajyoti-dutta/",
-          "https://www.facebook.com/debajyoti.dutta.1/"
+          "https://www.facebook.com/debajyoti.dutta.1/",
         ],
-        "hasCredential": [
+        hasCredential: [
           {
             "@type": "EducationalOccupationalCredential",
-            "name": "Azure DevOps Engineer Expert (AZ-400)",
-            "recognizedBy": { "@type": "Organization", "name": "Microsoft" }
+            name: "Azure DevOps Engineer Expert (AZ-400)",
+            recognizedBy: { "@type": "Organization", name: "Microsoft" },
           },
           {
             "@type": "EducationalOccupationalCredential",
-            "name": "Azure Developer Associate (AZ-204)",
-            "recognizedBy": { "@type": "Organization", "name": "Microsoft" }
+            name: "Azure Developer Associate (AZ-204)",
+            recognizedBy: { "@type": "Organization", name: "Microsoft" },
           },
           {
             "@type": "EducationalOccupationalCredential",
-            "name": "Azure Fundamentals (AZ-900)",
-            "recognizedBy": { "@type": "Organization", "name": "Microsoft" }
-          }
-        ]
-      }
-    ]
+            name: "Azure Fundamentals (AZ-900)",
+            recognizedBy: { "@type": "Organization", name: "Microsoft" },
+          },
+        ],
+      },
+    ],
   };
 
   return (
     <html lang="en">
-      <body className={outfit.className}>
+      <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        {children}
-      </body>
+      </head>
+      <body className={outfit.className}>{children}</body>
     </html>
   );
 }
