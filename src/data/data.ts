@@ -136,7 +136,7 @@ export const portfolioData = {
     }
   ],
   contact: {
-    address: "Kolkata, WB, India",
+    address: "Banagalore, KA, India",
     socials: {
       github: "https://github.com/Debajyoti1",
       linkedin: "https://www.linkedin.com/in/debajyoti-dutta/",
