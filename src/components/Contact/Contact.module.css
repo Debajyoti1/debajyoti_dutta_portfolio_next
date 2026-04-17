@@ -113,4 +113,8 @@
   .formWrapper {
     padding: 2rem;
   }
+  .infoBlock{
+    align-items: center;
+    text-align: center;
+  }
 }
