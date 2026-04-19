@@ -116,7 +116,7 @@ const Contact: React.FC<ContactProps> = ({ address, socials }) => {
       </div>
       
       <footer className={styles.footer}>
-        <p>&copy; {new Date().getFullYear()} Debajyoti Dutta | All Rights Reserved</p>
+        <p>&copy; {new Date().getFullYear()} Debajyoti Dutta | All Rights Reserved.</p>
       </footer>
     </section>
   );
