@@ -4,7 +4,7 @@ export const portfolioData = {
     title: "Full Stack Developer",
     subtitle: "Software Engineer",
     description: "I am Debajyoti Dutta, an experienced Full Stack MERN Developer and Software Engineer. I specialize in MERN Stack React Web, React Native, Node.js, Express.js, Python, Javascript, SQL, and cloud technologies like Firebase, Docker, Azure and Google Cloud Platform. With a proven track record in end-to-end project development and innovative problem-solving, I enjoy building scalable applications and continuously learning emerging technologies.",
-    resumeUrl: "/docs/DebajyotiDuttaResume.pdf",
+    resumeUrl: "/docs/DebajyotiDutta_MERN_React_Node.pdf",
     image: "/images/debajyoti-dutta.webp",
   },
   skills: [
