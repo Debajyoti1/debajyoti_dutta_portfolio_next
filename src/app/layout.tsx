@@ -8,43 +8,48 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Debajyoti Dutta | Full Stack Developer | Software Engineer",
+  title: "Debajyoti Dutta | Senior Full Stack Developer & Azure DevOps Engineer",
   description:
-    "Debajyoti Dutta is a Full Stack Developer skilled in MERN stack, Python, Javascript, React, Node JS, Express JS, Docker, Azure, and DevOps.",
+    "Debajyoti Dutta is a Senior Full Stack Developer & Azure DevOps Engineer expert in MERN stack (React, Node, Express, MongoDB), React Native, Python, Azure, GCP, and Docker.",
   keywords: [
     "Debajyoti Dutta",
-    "Full Stack Developer",
-    "Software Engineer",
-    "MERN Stack Developer",
+    "Senior Full Stack Developer",
+    "MERN Stack Developer Bangalore",
+    "Azure DevOps Engineer Expert",
     "React Native Developer",
+    "Software Engineer Bangalore",
     "Web Developer Kolkata",
-    "Azure Certified",
-    "React",
-    "NodeJS",
-    "Python",
-    "Pune",
-    "Portfolio",
+    "Azure Certified AZ-400",
+    "Full Stack MERN Developer",
+    "Docker",
+    "Python Developer",
   ],
   authors: [{ name: "Debajyoti Dutta", url: "https://debajyotidutta.com" }],
   creator: "Debajyoti Dutta",
   openGraph: {
-    type: "website",
+    type: "profile",
+    firstName: "Debajyoti",
+    lastName: "Dutta",
+    username: "debajyoti1",
+    gender: "male",
     url: "https://debajyotidutta.com/",
-    title: "Debajyoti Dutta | Full Stack Developer",
+    title: "Debajyoti Dutta | Senior Full Stack Developer & Azure DevOps Engineer",
     description:
-      "Software Engineer & Full Stack Developer specializing in MERN Stack, Python, Javascript, NodeJS, Express, React, and DevOps.",
-    siteName: "Debajyoti Dutta",
+      "Explore the software engineering portfolio of Debajyoti Dutta, specializing in scalable React/Node web apps, mobile development, and Azure Cloud solutions.",
+    siteName: "Debajyoti Dutta Portfolio",
     images: [
       {
         url: "https://debajyotidutta.com/images/debajyoti-dutta.webp",
-        alt: "Debajyoti Dutta - Full Stack Developer",
+        alt: "Debajyoti Dutta - Senior Full Stack Developer",
+        width: 1200,
+        height: 630,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Debajyoti Dutta | Full Stack Developer",
-    description: "Explore projects, experience, and skills of Debajyoti Dutta.",
+    title: "Debajyoti Dutta | Senior Full Stack Developer & Azure DevOps Engineer",
+    description: "Explore the developer portfolio, projects, and cloud certifications of Debajyoti Dutta.",
     images: ["https://debajyotidutta.com/images/debajyoti-dutta.webp"],
   },
   alternates: {
@@ -53,6 +58,13 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -68,9 +80,9 @@ export default function RootLayout({
         "@type": "WebSite",
         "@id": "https://debajyotidutta.com/#website",
         url: "https://debajyotidutta.com/",
-        name: "Debajyoti Dutta",
+        name: "Debajyoti Dutta Portfolio",
         description:
-          "Debajyoti Dutta - Software Engineer and Full Stack Developer.",
+          "Professional developer portfolio of Debajyoti Dutta, Senior Full Stack Developer and Azure DevOps Engineer.",
         publisher: {
           "@id": "https://debajyotidutta.com/#person",
         },
@@ -80,9 +92,9 @@ export default function RootLayout({
         "@type": "ProfilePage",
         "@id": "https://debajyotidutta.com/#profilepage",
         url: "https://debajyotidutta.com/",
-        name: "Debajyoti Dutta",
+        name: "Debajyoti Dutta Professional Profile",
         description:
-          "Software Engineer & Full Stack Developer specializing in MERN Stack, Python, Javascript, NodeJS, Express, React, and DevOps.",
+          "Senior Software Engineer & Full Stack Developer specializing in MERN Stack, Python, Javascript, NodeJS, Express, React, Azure Cloud solutions, and DevOps.",
         isPartOf: {
           "@id": "https://debajyotidutta.com/#website",
         },
@@ -100,10 +112,21 @@ export default function RootLayout({
         name: "Debajyoti Dutta",
         url: "https://debajyotidutta.com/",
         image: "https://debajyotidutta.com/images/debajyoti-dutta.webp",
-        jobTitle: "Full Stack Developer",
+        jobTitle: "Senior Full Stack Developer",
+        worksFor: {
+          "@type": "Organization",
+          name: "Kibbcom India Pvt. Ltd.",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Bangalore",
+            addressRegion: "Karnataka",
+            addressCountry: "IN",
+          }
+        },
         alumniOf: {
           "@type": "CollegeOrUniversity",
           name: "B.P. Poddar Institute of Management & Technology",
+          url: "http://www.bppimt.ac.in/"
         },
         address: {
           "@type": "PostalAddress",
@@ -112,6 +135,22 @@ export default function RootLayout({
           addressCountry: "IN",
         },
         knowsAbout: [
+          "https://en.wikipedia.org/wiki/JavaScript",
+          "https://en.wikipedia.org/wiki/TypeScript",
+          "https://en.wikipedia.org/wiki/React_(software)",
+          "https://en.wikipedia.org/wiki/Node.js",
+          "https://en.wikipedia.org/wiki/Express.js",
+          "https://en.wikipedia.org/wiki/MongoDB",
+          "https://en.wikipedia.org/wiki/PostgreSQL",
+          "https://en.wikipedia.org/wiki/Google_Cloud_Platform",
+          "https://en.wikipedia.org/wiki/Python_(programming_language)",
+          "https://en.wikipedia.org/wiki/Docker_(software)",
+          "https://en.wikipedia.org/wiki/Firebase",
+          "https://en.wikipedia.org/wiki/DevOps",
+          "https://en.wikipedia.org/wiki/Representational_state_transfer",
+          "https://en.wikipedia.org/wiki/React_Native",
+          "https://en.wikipedia.org/wiki/Microsoft_Azure",
+          "https://en.wikipedia.org/wiki/Microservices",
           "JavaScript",
           "TypeScript",
           "React",
@@ -128,11 +167,12 @@ export default function RootLayout({
           "React Native",
           "Azure",
           "Microservices",
+          "MERN Stack"
         ],
         hasOccupation: [
           {
             "@type": "Occupation",
-            name: "Full Stack Developer",
+            name: "Senior Full Stack Developer",
             occupationLocation: {
               "@type": "City",
               name: "Bangalore",
@@ -143,15 +183,15 @@ export default function RootLayout({
               "Backend Development",
               "Node.js Express.js",
               "REST API Design",
-              "Cloud",
-              "DevOps",
+              "Cloud Architecture",
+              "DevOps Automation",
               "Microservices",
-              "Python",
-              "Docker",
-              "Firebase",
-              "PostgreSQL",
-              "MongoDB",
-              "Azure",
+              "Python Development",
+              "Docker Containerization",
+              "Firebase Integration",
+              "PostgreSQL Administration",
+              "MongoDB Schema Design",
+              "Azure DevOps CI/CD Pipelines",
             ],
           },
         ],
@@ -159,22 +199,42 @@ export default function RootLayout({
           "https://github.com/Debajyoti1",
           "https://www.linkedin.com/in/debajyoti-dutta/",
           "https://www.facebook.com/debajyoti.dutta.1/",
+          "https://www.hackerrank.com/profile/debajyotidutta_2",
+          "https://leetcode.com/u/debajyoti1/"
         ],
         hasCredential: [
           {
             "@type": "EducationalOccupationalCredential",
             name: "Azure DevOps Engineer Expert (AZ-400)",
-            recognizedBy: { "@type": "Organization", name: "Microsoft" },
+            recognizedBy: { 
+              "@type": "Organization", 
+              name: "Microsoft",
+              url: "https://www.microsoft.com"
+            },
+            credentialCategory: "Professional Certification",
+            url: "https://learn.microsoft.com/api/credentials/share/en-us/DebajyotiDutta-0691/11BF394A62E6AF17"
           },
           {
             "@type": "EducationalOccupationalCredential",
             name: "Azure Developer Associate (AZ-204)",
-            recognizedBy: { "@type": "Organization", name: "Microsoft" },
+            recognizedBy: { 
+              "@type": "Organization", 
+              name: "Microsoft",
+              url: "https://www.microsoft.com"
+            },
+            credentialCategory: "Professional Certification",
+            url: "https://learn.microsoft.com/api/credentials/share/en-us/DebajyotiDutta-0691/A09C85D5DABF928B"
           },
           {
             "@type": "EducationalOccupationalCredential",
             name: "Azure Fundamentals (AZ-900)",
-            recognizedBy: { "@type": "Organization", name: "Microsoft" },
+            recognizedBy: { 
+              "@type": "Organization", 
+              name: "Microsoft",
+              url: "https://www.microsoft.com"
+            },
+            credentialCategory: "Professional Certification",
+            url: "https://learn.microsoft.com/api/credentials/share/en-us/DebajyotiDutta-0691/89FF0026CFC489D6"
           },
         ],
       },

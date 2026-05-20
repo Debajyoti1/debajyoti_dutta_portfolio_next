@@ -57,6 +57,7 @@ const Contact: React.FC<ContactProps> = ({ address, socials }) => {
               <input
                 type="text"
                 placeholder="Your Name"
+                aria-label="Your Name"
                 className={styles.input}
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -67,6 +68,7 @@ const Contact: React.FC<ContactProps> = ({ address, socials }) => {
               <input
                 type="email"
                 placeholder="Your Email"
+                aria-label="Your Email"
                 className={styles.input}
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -76,6 +78,7 @@ const Contact: React.FC<ContactProps> = ({ address, socials }) => {
             <div className={styles.inputGroup}>
               <textarea
                 placeholder="Message"
+                aria-label="Message"
                 className={styles.textarea}
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -101,13 +104,13 @@ const Contact: React.FC<ContactProps> = ({ address, socials }) => {
           <div className={styles.infoBlock}>
             <h3 className={styles.infoTitle}>Connect With Me</h3>
             <div className={styles.socialLinks}>
-              <a href={socials.github} target="_blank" rel="noreferrer" className={styles.socialIcon}>
+              <a href={socials.github} target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
                 GitHub
               </a>
-              <a href={socials.linkedin} target="_blank" rel="noreferrer" className={styles.socialIcon}>
+              <a href={socials.linkedin} target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
                 LinkedIn
               </a>
-              <a href={socials.facebook} target="_blank" rel="noreferrer" className={styles.socialIcon}>
+              <a href={socials.facebook} target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
                 Facebook
               </a>
             </div>

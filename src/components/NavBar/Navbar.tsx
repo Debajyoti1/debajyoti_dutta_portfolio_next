@@ -38,11 +38,17 @@ const Navbar = () => {
         <a href="#">Debajyoti Dutta</a>
       </div>
 
-      <div className={`${styles.hamburger} ${menuOpen ? styles.open : ''}`} onClick={toggleMenu}>
+      <button 
+        className={`${styles.hamburger} ${menuOpen ? styles.open : ''}`} 
+        onClick={toggleMenu}
+        aria-label="Toggle navigation menu"
+        aria-expanded={menuOpen}
+        type="button"
+      >
         <div className={styles.bar1}></div>
         <div className={styles.bar2}></div>
         <div className={styles.bar3}></div>
-      </div>
+      </button>
 
       <ul className={`${styles.navLinks} ${menuOpen ? styles.showMenu : ''}`}>
         {navLinks.map((link) => (

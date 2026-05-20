@@ -46,7 +46,7 @@ const Hero: React.FC<HeroProps> = ({ name, title, subtitle, resumeUrl }) => {
             {subtitle}
           </motion.p>
           <motion.div variants={itemVariants} className={styles.cta}>
-            <a href={resumeUrl} target="_blank" rel="noreferrer" className="btn-primary">
+            <a href={resumeUrl} target="_blank" rel="noopener noreferrer" className="btn-primary">
               Download Resume
             </a>
             <a href="#projects" className={styles.secondaryBtn}>

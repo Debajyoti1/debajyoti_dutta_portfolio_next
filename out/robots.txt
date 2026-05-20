@@ -1,4 +1,18 @@
+# Allow all search engines and AI search bots to crawl the portfolio
 User-agent: *
+Allow: /
+
+# Specifically ensure AI search engines crawl content for summaries
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
 Allow: /
 
 Sitemap: https://debajyotidutta.com/sitemap.xml
