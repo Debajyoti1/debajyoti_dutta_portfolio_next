@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
+import SpotlightAndScroll from "@/components/SpotlightAndScroll/SpotlightAndScroll";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -8,19 +9,19 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Debajyoti Dutta | Senior Full Stack Developer & Azure DevOps Engineer",
+  title: "Debajyoti Dutta | Full Stack Developer",
   description:
-    "Debajyoti Dutta is a Senior Full Stack Developer & Azure DevOps Engineer expert in MERN stack (React, Node, Express, MongoDB), React Native, Python, Azure, GCP, and Docker.",
+    "Debajyoti Dutta is a Full Stack Developer & Software Engineer expert in the MERN stack (React, Node, Express, MongoDB), React Native, TypeScript, Python, and cloud deployments.",
   keywords: [
     "Debajyoti Dutta",
-    "Senior Full Stack Developer",
+    "Full Stack Developer",
     "MERN Stack Developer Bangalore",
-    "Azure DevOps Engineer Expert",
-    "React Native Developer",
+    "React Developer Bangalore",
+    "NodeJS Developer Bangalore",
     "Software Engineer Bangalore",
     "Web Developer Kolkata",
-    "Azure Certified AZ-400",
-    "Full Stack MERN Developer",
+    "React Native Developer",
+    "Full Stack Web Developer",
     "Docker",
     "Python Developer",
   ],
@@ -33,14 +34,14 @@ export const metadata: Metadata = {
     username: "debajyoti1",
     gender: "male",
     url: "https://debajyotidutta.com/",
-    title: "Debajyoti Dutta | Senior Full Stack Developer & Azure DevOps Engineer",
+    title: "Debajyoti Dutta | Full Stack Developer",
     description:
-      "Explore the software engineering portfolio of Debajyoti Dutta, specializing in scalable React/Node web apps, mobile development, and Azure Cloud solutions.",
+      "Explore the software engineering portfolio of Debajyoti Dutta, specializing in scalable React/Node web apps, mobile development, and modern cloud deployment architectures.",
     siteName: "Debajyoti Dutta Portfolio",
     images: [
       {
         url: "https://debajyotidutta.com/images/debajyoti-dutta.webp",
-        alt: "Debajyoti Dutta - Senior Full Stack Developer",
+        alt: "Debajyoti Dutta - Full Stack Developer",
         width: 1200,
         height: 630,
       },
@@ -48,8 +49,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Debajyoti Dutta | Senior Full Stack Developer & Azure DevOps Engineer",
-    description: "Explore the developer portfolio, projects, and cloud certifications of Debajyoti Dutta.",
+    title: "Debajyoti Dutta | Full Stack Developer",
+    description: "Explore the developer portfolio, projects, and full stack web solutions of Debajyoti Dutta.",
     images: ["https://debajyotidutta.com/images/debajyoti-dutta.webp"],
   },
   alternates: {
@@ -82,7 +83,7 @@ export default function RootLayout({
         url: "https://debajyotidutta.com/",
         name: "Debajyoti Dutta Portfolio",
         description:
-          "Professional developer portfolio of Debajyoti Dutta, Senior Full Stack Developer and Azure DevOps Engineer.",
+          "Professional developer portfolio of Debajyoti Dutta, Full Stack Developer and Software Engineer.",
         publisher: {
           "@id": "https://debajyotidutta.com/#person",
         },
@@ -94,7 +95,7 @@ export default function RootLayout({
         url: "https://debajyotidutta.com/",
         name: "Debajyoti Dutta Professional Profile",
         description:
-          "Senior Software Engineer & Full Stack Developer specializing in MERN Stack, Python, Javascript, NodeJS, Express, React, Azure Cloud solutions, and DevOps.",
+          "Full Stack Developer specializing in MERN Stack, Python, Javascript, NodeJS, Express, React, React Native, and DevOps automation.",
         isPartOf: {
           "@id": "https://debajyotidutta.com/#website",
         },
@@ -112,7 +113,7 @@ export default function RootLayout({
         name: "Debajyoti Dutta",
         url: "https://debajyotidutta.com/",
         image: "https://debajyotidutta.com/images/debajyoti-dutta.webp",
-        jobTitle: "Senior Full Stack Developer",
+        jobTitle: "Full Stack Developer",
         worksFor: {
           "@type": "Organization",
           name: "Kibbcom India Pvt. Ltd.",
@@ -172,7 +173,7 @@ export default function RootLayout({
         hasOccupation: [
           {
             "@type": "Occupation",
-            name: "Senior Full Stack Developer",
+            name: "Full Stack Developer",
             occupationLocation: {
               "@type": "City",
               name: "Bangalore",
@@ -249,7 +250,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={outfit.className}>{children}</body>
+      <body className={outfit.className}>
+        <SpotlightAndScroll />
+        {children}
+      </body>
     </html>
   );
 }

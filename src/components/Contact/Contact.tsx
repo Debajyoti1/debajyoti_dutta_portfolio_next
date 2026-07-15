@@ -48,35 +48,45 @@ const Contact: React.FC<ContactProps> = ({ address, socials }) => {
               className={styles.alertSuccess}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
+              role="alert"
+              aria-live="polite"
             >
               Your message is sent! I will get back to you shortly.
             </motion.div>
           )}
           <form className={styles.form} onSubmit={handleSubmit}>
             <div className={styles.inputGroup}>
+              <label htmlFor="contact-name" className="sr-only">Your Name</label>
               <input
                 type="text"
+                id="contact-name"
                 placeholder="Your Name"
                 aria-label="Your Name"
                 className={styles.input}
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                autoComplete="name"
                 required
               />
             </div>
             <div className={styles.inputGroup}>
+              <label htmlFor="contact-email" className="sr-only">Your Email</label>
               <input
                 type="email"
+                id="contact-email"
                 placeholder="Your Email"
                 aria-label="Your Email"
                 className={styles.input}
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                autoComplete="email"
                 required
               />
             </div>
             <div className={styles.inputGroup}>
+              <label htmlFor="contact-message" className="sr-only">Your Message</label>
               <textarea
+                id="contact-message"
                 placeholder="Message"
                 aria-label="Message"
                 className={styles.textarea}
@@ -104,13 +114,31 @@ const Contact: React.FC<ContactProps> = ({ address, socials }) => {
           <div className={styles.infoBlock}>
             <h3 className={styles.infoTitle}>Connect With Me</h3>
             <div className={styles.socialLinks}>
-              <a href={socials.github} target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
+              <a 
+                href={socials.github} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className={styles.socialIcon}
+                aria-label="Connect with Debajyoti Dutta on GitHub"
+              >
                 GitHub
               </a>
-              <a href={socials.linkedin} target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
+              <a 
+                href={socials.linkedin} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className={styles.socialIcon}
+                aria-label="Connect with Debajyoti Dutta on LinkedIn"
+              >
                 LinkedIn
               </a>
-              <a href={socials.facebook} target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
+              <a 
+                href={socials.facebook} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className={styles.socialIcon}
+                aria-label="Connect with Debajyoti Dutta on Facebook"
+              >
                 Facebook
               </a>
             </div>

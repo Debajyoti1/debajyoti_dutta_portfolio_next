@@ -33,11 +33,11 @@ const About: React.FC<AboutProps> = ({ description, image }) => {
           <div className={styles.imageWrapper}>
             <Image 
               src={image} 
-              alt="Debajyoti Dutta" 
+              alt="Debajyoti Dutta - Full Stack Developer Profile Picture" 
               fill
               sizes="(max-width: 768px) 250px, 300px"
               className={styles.image} 
-              priority={false}
+              priority
             />
             <div className={styles.imageBorder}></div>
           </div>

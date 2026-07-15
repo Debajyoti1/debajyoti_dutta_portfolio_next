@@ -1,23 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <url>
-    <loc>https://debajyotidutta.com/</loc>
-    <lastmod>2026-05-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://debajyotidutta.com/docs/DebajyotiDuttaResume.pdf</loc>
-    <lastmod>2026-05-20</lastmod>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://debajyotidutta.com/docs/DebajyotiDutta_MERN_React_Node.pdf</loc>
-    <lastmod>2026-05-20</lastmod>
-    <priority>0.8</priority>
-  </url>
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>https://debajyotidutta.com</loc>
+<lastmod>2026-07-15T09:27:10.722Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>1</priority>
+</url>
 </urlset>

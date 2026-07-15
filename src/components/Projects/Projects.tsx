@@ -53,7 +53,13 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
                 <span key={i} className={styles.tag}>{tag}</span>
               ))}
             </div>
-            <a href={project.link} target="_blank" rel="noreferrer" className={styles.projectLink}>
+            <a 
+              href={project.link} 
+              target="_blank" 
+              rel="noreferrer" 
+              className={styles.projectLink}
+              aria-label={`View GitHub repository for ${project.title}`}
+            >
               View on GitHub →
             </a>
           </motion.div>

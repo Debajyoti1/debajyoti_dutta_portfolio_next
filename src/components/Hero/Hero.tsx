@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import styles from './Hero.module.css';
+import TerminalCard from '@/components/Terminal/TerminalCard';
 
 interface HeroProps {
   name: string;
@@ -46,13 +47,32 @@ const Hero: React.FC<HeroProps> = ({ name, title, subtitle, resumeUrl }) => {
             {subtitle}
           </motion.p>
           <motion.div variants={itemVariants} className={styles.cta}>
-            <a href={resumeUrl} target="_blank" rel="noopener noreferrer" className="btn-primary">
+            <a 
+              href={resumeUrl} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="btn-primary"
+              aria-label="Download Debajyoti Dutta's Resume (PDF)"
+            >
               Download Resume
             </a>
-            <a href="#projects" className={styles.secondaryBtn}>
+            <a 
+              href="#projects" 
+              className={styles.secondaryBtn}
+              aria-label="Scroll to Projects and Work section"
+            >
               View Work
             </a>
           </motion.div>
+        </motion.div>
+
+        <motion.div
+          className={styles.terminalContainer}
+          initial={{ opacity: 0, x: 50, scale: 0.95 }}
+          animate={{ opacity: 1, x: 0, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <TerminalCard />
         </motion.div>
       </div>
     </section>

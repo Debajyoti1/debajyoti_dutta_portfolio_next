@@ -1,0 +1,206 @@
+.terminal {
+  --text-primary: #ffffff;
+  --text-secondary: #a3a3a3;
+  --accent-blue: #00d2ff;
+  --accent-purple: #8b5cf6;
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #161616;
+
+  width: 100%;
+  max-width: 550px;
+  background: rgba(10, 10, 16, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 
+              0 0 30px rgba(0, 210, 255, 0.15);
+  overflow: hidden;
+  font-family: 'Courier New', Courier, monospace;
+  transition: all 0.3s ease;
+}
+
+.terminal:hover {
+  border-color: rgba(0, 210, 255, 0.3);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7), 
+              0 0 35px rgba(0, 210, 255, 0.25);
+}
+
+.titleBar {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  background: rgba(22, 22, 30, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.windowControls {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.red {
+  background-color: #ff5f56;
+}
+
+.yellow {
+  background-color: #ffbd2e;
+}
+
+.green {
+  background-color: #27c93f;
+}
+
+.title {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  padding-right: 52px; /* balance centering due to window controls width */
+}
+
+.tabBar {
+  display: flex;
+  background: rgba(14, 14, 22, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 0 8px;
+}
+
+.tab {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  padding: 8px 16px;
+  font-family: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 2px solid transparent;
+  outline: none;
+}
+
+.tab:hover {
+  color: var(--accent-blue);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.activeTab {
+  color: var(--accent-blue);
+  border-bottom-color: var(--accent-blue);
+  background: rgba(0, 210, 255, 0.05);
+  font-weight: bold;
+}
+
+.body {
+  position: relative;
+  height: 320px;
+  padding: 16px;
+  overflow-y: auto;
+  color: #33ff33; /* classic terminal green */
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Custom Scrollbar for Terminal */
+.body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.body::-webkit-scrollbar-thumb {
+  background: rgba(0, 210, 255, 0.3);
+  border-radius: 3px;
+}
+
+.body::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 210, 255, 0.6);
+}
+
+.crtOverlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  );
+  background-size: 100% 4px;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.35;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+.systemInfo {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  margin-bottom: 16px;
+}
+
+.commandBlock {
+  margin-bottom: 16px;
+}
+
+.promptLine {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.promptPrefix {
+  color: var(--accent-purple);
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.commandText {
+  color: #fff;
+  font-weight: 500;
+}
+
+.outputText {
+  color: #00ffcc; /* cool glowing cyan output */
+  text-shadow: 0 0 5px rgba(0, 255, 204, 0.4);
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 15px;
+  background-color: var(--accent-blue);
+  box-shadow: 0 0 8px var(--accent-blue);
+  animation: blink 1s step-end infinite;
+  margin-left: 4px;
+}
+
+@keyframes blink {
+  from, to { background-color: transparent; box-shadow: none; }
+  50% { background-color: var(--accent-blue); box-shadow: 0 0 8px var(--accent-blue); }
+}
+
+@media (max-width: 768px) {
+  .terminal {
+    max-width: 100%;
+  }
+  
+  .body {
+    height: 280px;
+    font-size: 0.8rem;
+  }
+}

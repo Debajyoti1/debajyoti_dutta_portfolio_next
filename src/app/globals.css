@@ -1,6 +1,27 @@
 
 
 :root {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --accent-blue: #0284c7;
+  --accent-purple: #4f46e5;
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(15, 23, 42, 0.08);
+  --neon-shadow: 0 10px 25px rgba(2, 132, 199, 0.1), 0 4px 12px rgba(79, 70, 229, 0.05);
+  --transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  --spotlight-color: rgba(2, 132, 199, 0.04);
+  --glow-opacity: 0.15;
+  
+  --badge-bg: rgba(15, 23, 42, 0.05);
+  --progress-track: rgba(15, 23, 42, 0.08);
+  --mobile-menu-bg: rgba(248, 250, 252, 0.98);
+  --menu-text-start: #0f172a;
+  --menu-text-end: #475569;
+}
+
+[data-theme="dark"] {
   --bg-primary: #0a0a0a;
   --bg-secondary: #161616;
   --text-primary: #ffffff;
@@ -10,7 +31,14 @@
   --glass-bg: rgba(22, 22, 22, 0.6);
   --glass-border: rgba(255, 255, 255, 0.08);
   --neon-shadow: 0 0 15px rgba(0, 210, 255, 0.3), 0 0 30px rgba(58, 123, 213, 0.1);
-  --transition: all 0.3s ease;
+  --spotlight-color: rgba(0, 210, 255, 0.05);
+  --glow-opacity: 0.4;
+  
+  --badge-bg: rgba(255, 255, 255, 0.05);
+  --progress-track: rgba(255, 255, 255, 0.1);
+  --mobile-menu-bg: rgba(10, 10, 15, 0.98);
+  --menu-text-start: #ffffff;
+  --menu-text-end: #a1a1aa;
 }
 
 * {
@@ -27,6 +55,27 @@ body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   scroll-behavior: smooth;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: 
+    linear-gradient(rgba(15, 23, 42, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.015) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+[data-theme="dark"] body::before {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
 }
 
 a {
@@ -85,9 +134,10 @@ ul {
 }
 
 @keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
+  0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+  33% { transform: translate(30px, -50px) scale(1.08) rotate(5deg); }
+  66% { transform: translate(-20px, 20px) scale(0.95) rotate(-5deg); }
+  100% { transform: translate(0, 0) scale(1) rotate(0deg); }
 }
 
 .animate-fade-in {
@@ -161,3 +211,87 @@ ul {
   margin: 0 auto;
   width: 100%;
 }
+
+/* Custom Neon Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--accent-blue), var(--accent-purple));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-blue);
+  box-shadow: 0 0 10px var(--accent-blue);
+}
+
+/* Typography Balance */
+.heading, h1, h2, h3 {
+  text-wrap: balance;
+}
+
+/* Scroll Progress Bar */
+#scroll-progress {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+  z-index: 9999;
+  transform-origin: 0 50%;
+  box-shadow: 0 0 8px var(--accent-blue);
+  transform: scaleX(0);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports ((animation-timeline: scroll())) {
+    @keyframes grow-progress {
+      from { transform: scaleX(0); }
+      to { transform: scaleX(1); }
+    }
+
+    #scroll-progress {
+      animation: grow-progress auto linear;
+      animation-timeline: scroll();
+    }
+  }
+}
+
+/* Spotlight Ambient Cursor Tracker */
+.spotlight-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  background: radial-gradient(
+    600px circle at var(--mouse-x, 0px) var(--mouse-y, 0px),
+    var(--spotlight-color),
+    transparent 40%
+  );
+  transition: opacity 0.3s ease;
+}
+
+/* Screen Reader Only Utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+

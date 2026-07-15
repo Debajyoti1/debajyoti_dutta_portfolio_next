@@ -2,6 +2,11 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FaNodeJs, FaReact, FaPython, FaLinux, FaDocker } from 'react-icons/fa';
+import { SiExpress, SiMongodb } from 'react-icons/si';
+import { IoLogoJavascript } from 'react-icons/io5';
+import { BiLogoPostgresql } from 'react-icons/bi';
+import { TbBrandReactNative, TbBrandAzure } from 'react-icons/tb';
 import styles from './Skills.module.css';
 
 interface Skill {
@@ -13,6 +18,36 @@ interface Skill {
 interface SkillsProps {
   skills: Skill[];
 }
+
+const getSkillIcon = (name: string, color: string) => {
+  const props = { size: 28, style: { color } };
+  switch (name.toLowerCase()) {
+    case 'javascript':
+      return <IoLogoJavascript {...props} />;
+    case 'nodejs':
+      return <FaNodeJs {...props} />;
+    case 'express.js':
+      return <SiExpress {...props} />;
+    case 'react':
+      return <FaReact {...props} />;
+    case 'mongodb':
+      return <SiMongodb {...props} />;
+    case 'postgresql':
+      return <BiLogoPostgresql {...props} />;
+    case 'react native':
+      return <TbBrandReactNative {...props} />;
+    case 'python':
+      return <FaPython {...props} />;
+    case 'linux':
+      return <FaLinux {...props} />;
+    case 'docker':
+      return <FaDocker {...props} />;
+    case 'azure':
+      return <TbBrandAzure {...props} />;
+    default:
+      return null;
+  }
+};
 
 const Skills: React.FC<SkillsProps> = ({ skills }) => {
   return (
@@ -49,7 +84,10 @@ const Skills: React.FC<SkillsProps> = ({ skills }) => {
             whileHover={{ scale: 1.05, borderColor: skill.color }}
           >
             <div className={styles.skillHeader}>
-              <h3 className={styles.skillName}>{skill.name}</h3>
+              <div className={styles.skillTitleGroup}>
+                {getSkillIcon(skill.name, skill.color)}
+                <h3 className={styles.skillName}>{skill.name}</h3>
+              </div>
               <span className={styles.skillPercentage} style={{ color: skill.color }}>
                 {skill.progress}%
               </span>
